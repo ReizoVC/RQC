@@ -3,7 +3,62 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 90vh;
+    height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
+    
+}
+
+.heroMainCont{
+    display: flex;
+    justify-content: space-between;
+    // padding: 30px 100px;
+    width: 70%;
+    height: 100%;
+}
+.heroText{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    color: aliceblue;
+    gap: 30px;
+    h1, h2 {
+        font-size: 5vw;
+    }
+    h1{
+        font-weight: 800;
+    }
+    h2{
+        font-weight: 800;
+        font-family: "Karantina", system-ui;
+        margin-left: 15px;
+    }
+    p{
+        margin-left: 15px;
+    }
+    button{
+
+        border: solid 5px #f0f8ff;
+        background-color: transparent;
+        color:#f0f8ff;
+        border-radius: 20px;
+        // margin-top: 50px;
+        padding: 5px 30px;
+        width: fit-content;
+        font-size: 1.5vw;
+    }
+}
+
+.heroRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heroLogo{
+    opacity: 70%;
+}
+
+.prueba{
+    height: 400vh;
 }
