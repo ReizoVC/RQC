@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,36 +9,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=League+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="source/CSS/styles.css">
+    <link rel="shortcut icon" href="source/images/logo.png" />
 </head>
 <body>
     <header>
-
-            <img src="source/images/logo.png" alt="" class="logo">
-            <ul class="links">
-                <li class="element">CONSULTORIA</li>
-                <li class="element">NOVEDADES</li>
-                <li class="element">MIS SERVICIOS</li>
-            </ul>
-            <button type="button" class="btn">CONCRETAR CITA</button>
-
+            <a href="index.html"><img src="source/images/logo.png" alt="" class="logo"></a>
+            <nav class="links">
+                <a href="index.html" class="navItem">INICIO</a>
+                <a href="source/pages/consultoria.html" class="navItem">CONSULTORIA</a>
+                <a href="source/pages/novedades.html" class="navItem">NOVEDADES</a>
+                <a href="source/pages/servicios.html" class="navItem">MIS SERVICIOS</a>
+            </nav>
+            <a href="" class="btn">CONCRETAR CITA</a>
     </header>
     <main>
-        <div class="hero">
+        <section class="hero">
             <div class="heroMainCont">
                 <div class="heroText">
                     <h1>RER - QA</h1>
                     <h2>CONSOULTING</h2>
                     <p>NO HAY MEJOR GUÍA QUE <br>LA VOZ DE LA EXPERIENCIA</p>
-                    <button type="button">SERVICIOS</button>
+                    <a href="#section1" class="heroButton">SERVICIOS</a>
                 </div>
                 <div class="heroRight">
-                    <img src="source/images/logo.png" alt="logo" class="heroLogo">
+                    <!-- <img src="source/images/logo.png" alt="logo" class="heroLogo"> -->
                 </div>
             </div>
-        </div>
-        <div class="prueba">
-
-        </div>
+        </section>
+        <section class="inicioInfo-1 inicioInfo" id="section1">
+            <div>
+                <h3 class="subTitulo">CONSULTORIA</h3>
+                <p class="infoParrafo1">
+                        Mi objetivo es conocerte a ti y a tu negocio para 
+                        ver lo que funciona y descubrir nuevas oportunidades 
+                        de crecimiento. ¿Cómo lo hago? A través de mi amplia 
+                        experiencia en el sector, un enfoque claramente definido 
+                        y opciones de soporte innovadoras.
+                </p>
+                <a href="" class="sectionButton buttonGen">CONCRETAR CITA</a>
+            </div>
+            <img src="source/images/Inicio/indexImg1.jpg" alt="imagenCheck" class="imagenCheck infoImagen">
+        </section>
+        <section class="inicioInfo-2 inicioInfo">
+            <img src="source/images/Inicio/indexImg2.jpg" alt="" class="imagenCheck infoImagen">
+            <div>
+                <h3 class="subTitulo">NOVEDADES</h3>
+                <p class="infoParrafo2">
+                        ¡Ultimas noticias! Aquí podrás obtener información sobre 
+                        los próximos eventos y leer mis últimas actualizaciones. 
+                        También recibirás información exclusiva sobre los nuevos 
+                        proyectos, los eventos de la temporada y avisos importantes 
+                        antes que nadie.
+                </p>
+                <a href="" class="sectionButton buttonGen">INFORMACION</a> 
+            </div>
+        </section>
+        <section class="inicioInfo-3 inicioInfo">
+            <div>
+                <h3 class="subTitulo">RER-QA CONSOULTING</h3>
+                <p class="infoParrafo3">
+                        Cuando trabajemos juntos, comenzaré por averiguar qué está 
+                        funcionando en tu negocio y qué cosas podrían mejorarse, ya 
+                        sea que eso signifique perfeccionar un proceso de negocio 
+                        existente o eliminar deficiencias. Sin embargo, en última 
+                        instancia, mi objetivo es ampliar tus flujos de ingreso y descubrir 
+                        nuevas oportunidades de crecimiento. ¿Cómo lo hago? A través de mi 
+                        amplia experiencia en el sector, un enfoque claramente definido y 
+                        opciones de soporte innovadoras. Cuando trabajas conmigo, puedes 
+                        confiar en que realizaré un proceso con garantías, desarrollado con 
+                        cuidado y que ha demostrado brindar buenos resultados en todos los 
+                        sectores de la industria.
+                </p>
+            </div>
+            <img src="source/images/Inicio/indexImg3.jpg" alt="" class="imagenCheck infoImagen">
+        </section>
     </main>
     <footer>
 

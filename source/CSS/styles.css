@@ -21,21 +21,33 @@ a {
 .logo {
   height: 60px;
   background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #edf5fc;
+}
+
+.buttonGen {
+  background-color: #dfdfdf;
+  color: #252525;
+  padding: 20px 30px;
+  border-radius: 15px;
 }
 
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: rgb(237, 245, 252);
+  color: #edf5fc;
   background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
   height: 80px;
-  animation: enhance-header linear both;
-  animation-timeline: scroll(root);
-  animation-range: 0 100px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(9px);
   z-index: 10;
 }
 
@@ -44,7 +56,7 @@ header {
   gap: 70px;
   align-items: center;
 }
-.links li {
+.links a {
   font-family: "Lexend Exa", sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -55,12 +67,36 @@ header {
   font-family: "Lexend Exa", sans-serif;
   font-weight: 600;
   color: rgb(0, 0, 0);
-  padding: 10px;
-  border: none;
+  padding: 12px 25px;
   border-radius: 13px;
   font-size: 12px;
-  height: 40px;
-  width: 160px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #08b3b3;
+  transition: 0.3s;
+  color: #edf5fc;
+}
+
+.navItem {
+  --clippy: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+}
+
+.navItem::after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 100%;
+  margin-top: 3px;
+  height: 3px;
+  clip-path: var(--clippy);
+  transition: clip-path 0.5s;
+  border-radius: 3px;
+}
+
+.navItem:hover {
+  --clippy: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
 }
 
 @keyframes enhance-header {
@@ -70,7 +106,7 @@ header {
   }
 }
 .hero {
-  background-image: url(../images/fondo-hero.jpg);
+  background-image: url(../images/fondoPiola.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -107,8 +143,10 @@ header {
 }
 .heroText p {
   margin-left: 15px;
+  text-shadow: 0px 2px 2px #041dac;
 }
-.heroText button {
+
+.heroButton {
   border: solid 5px #f0f8ff;
   background-color: transparent;
   color: #f0f8ff;
@@ -118,6 +156,12 @@ header {
   font-size: 1.5vw;
 }
 
+.heroButton:hover {
+  border-color: #c0c0c0;
+  color: #c0c0c0;
+  transition: 0.3s;
+}
+
 .heroRight {
   display: flex;
   align-items: center;
@@ -125,11 +169,134 @@ header {
 }
 
 .heroLogo {
-  opacity: 70%;
+  opacity: 80%;
 }
 
-.prueba {
-  height: 400vh;
+.infoImagen {
+  height: 100vh;
+  width: 50vw;
+}
+
+.inicioInfo {
+  display: flex;
+}
+.inicioInfo div {
+  justify-self: center;
+  align-self: center;
+  text-align: left;
+  color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.inicioInfo div p {
+  width: 50%;
+}
+
+.subTitulo {
+  font-size: 3.5em;
+  text-shadow: 0px 4px 4px #20DFDF;
+}
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+main > section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.sectionButton {
+  font-weight: 700;
+  font-size: 19px;
+  background-color: #20DFDF;
+  color: #f0f8ff;
+}
+
+.sectionButton:hover {
+  transition: 0.1s;
+  background-color: #0C65A6;
+}
+
+.cards {
+  color: #fff;
+}
+
+.wrapper {
+  padding: 10px 10%;
+}
+
+#card-area {
+  padding: 50px 0;
+}
+
+.box-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.box {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.box img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.overlay {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(transparent, #112849 89%);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.overlay h3 {
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 80%;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.box:hover img {
+  transform: scale(1.1);
+}
+
+.box:hover .overlay {
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
